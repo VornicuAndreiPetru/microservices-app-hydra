@@ -1,0 +1,7 @@
+D:\dev-spring-boot\futureservices\notification\src\main\java\com\vornicu\notification\Notification.java
+D:\dev-spring-boot\futureservices\notification\src\main\java\com\vornicu\notification\NotificationApplication.java
+D:\dev-spring-boot\futureservices\notification\src\main\java\com\vornicu\notification\NotificationConfig.java
+D:\dev-spring-boot\futureservices\notification\src\main\java\com\vornicu\notification\NotificationController.java
+D:\dev-spring-boot\futureservices\notification\src\main\java\com\vornicu\notification\NotificationRepository.java
+D:\dev-spring-boot\futureservices\notification\src\main\java\com\vornicu\notification\NotificationService.java
+D:\dev-spring-boot\futureservices\notification\src\main\java\com\vornicu\notification\rabbitmq\NotificationConsumer.java

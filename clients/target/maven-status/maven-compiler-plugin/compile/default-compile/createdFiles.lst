@@ -1,0 +1,4 @@
+com\vornicu\clients\fraud\FraudCheckResponse.class
+com\vornicu\clients\notification\NotificationClient.class
+com\vornicu\clients\notification\NotificationRequest.class
+com\vornicu\clients\fraud\FraudClient.class

@@ -1,0 +1,8 @@
+com\vornicu\customer\CustomerController.class
+com\vornicu\customer\CustomerRegistrationRequest.class
+com\vornicu\customer\Customer$CustomerBuilder.class
+com\vornicu\customer\CustomerApplication.class
+com\vornicu\customer\CustomerService.class
+com\vornicu\customer\CustomerConfig.class
+com\vornicu\customer\Customer.class
+com\vornicu\customer\CustomerRepository.class

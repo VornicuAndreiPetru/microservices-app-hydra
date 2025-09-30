@@ -1,0 +1,6 @@
+com\vornicu\fraud\FraudCheckHistoryRepository.class
+com\vornicu\fraud\FraudCheckService.class
+com\vornicu\fraud\FraudCheckHistory.class
+com\vornicu\fraud\FraudCheckHistory$FraudCheckHistoryBuilder.class
+com\vornicu\fraud\FraudController.class
+com\vornicu\fraud\FraudApplication.class

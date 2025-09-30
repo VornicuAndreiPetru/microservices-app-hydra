@@ -1,0 +1,8 @@
+com\vornicu\notification\NotificationController.class
+com\vornicu\notification\Notification.class
+com\vornicu\notification\NotificationApplication.class
+com\vornicu\notification\rabbitmq\NotificationConsumer.class
+com\vornicu\notification\Notification$NotificationBuilder.class
+com\vornicu\notification\NotificationService.class
+com\vornicu\notification\NotificationConfig.class
+com\vornicu\notification\NotificationRepository.class
