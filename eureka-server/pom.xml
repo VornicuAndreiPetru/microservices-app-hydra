@@ -23,6 +23,25 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>build-docker-image</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.cloud.tools</groupId>
+                        <artifactId>jib-maven-plugin</artifactId>
+                        <configuration>
+                            <to>
+                                <image>docker.io/vornicuandrei/eureka-server:latest</image>
+                            </to>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
