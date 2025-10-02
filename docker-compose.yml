@@ -1,11 +1,11 @@
 services:
   postgres:
     container_name: postgres
-    image: postgres
+    image: postgres:17-alpine
     environment:
       POSTGRES_USER: andrei
       POSTGRES_PASSWORD: andrei
-      POSTGRES_DB: customer
+#      POSTGRES_DB: customer
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
@@ -43,12 +43,17 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - spring
+      - postgres
 
   eureka-server:
     image: vornicuandrei/eureka-server:latest
     container_name: eureka-server
     ports:
       - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - spring
     depends_on:
@@ -59,11 +64,62 @@ services:
     container_name: apigw
     ports:
       - "8083:8083"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - spring
     depends_on:
       - zipkin
       - eureka-server
+
+  customer:
+    image: vornicuandrei/customer:latest
+    container_name: customer
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - eureka-server
+      - rabbitmq
+      - postgres
+
+  fraud:
+    image: vornicuandrei/fraud:latest
+    container_name: fraud
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - eureka-server
+      - postgres
+      - rabbitmq
+
+
+  notification:
+    image: vornicuandrei/notification:latest
+    container_name: notification
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - eureka-server
+      - postgres
+      - rabbitmq
 
 
 networks:
